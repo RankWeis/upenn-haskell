@@ -1,0 +1,120 @@
+
+==================== FINAL INTERFACE ====================
+2017-06-07 01:10:04.690748 UTC
+
+interface upenn-haskell-0.1.0.0-CHl4ef8onAEL7YxDnip8Mo:Week1 8002
+  interface hash: 8fa945bc1de710215f94a910d903deb8
+  ABI hash: 5b853ef812c5c88a6456859f2e6510ef
+  export-list hash: 8a582a007710397ef66577c50c7291fc
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: f6624f22fcdd76ed0ac6625466e2d712
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Week1.doubleEveryOther
+  Week1.doubleLoop
+  Week1.luhn
+  Week1.reverseList
+  Week1.sumArray
+  Week1.sumDigits
+  Week1.toDigits
+  Week1.toDigitsRev
+  Week1.validate
+module dependencies:
+package dependencies: base-4.9.1.0* ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Const
+                         base-4.9.1.0:Data.Monoid base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:GHC.Generics base-4.9.1.0:GHC.IO.Exception
+                         base-4.9.1.0:GHC.TypeLits
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.Num 00bfaa7b2f9d6084913c0697a8a49ec8
+import  -/  base-4.9.1.0:GHC.Real 82e4e59051a13dba1da63e1e970a69e6
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+import  -/  integer-gmp-1.0.0.1:GHC.Integer.Type 318df275d77dcdb18e0006d8d7870c2a
+c406b4b23bc73bb034005ea455012dc8
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Week1.$trModule2 Week1.$trModule1) -}
+db7993a999e110aeaa8cdbfdf0965af9
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Week1"#) -}
+f30d17a4f31aa9444ed36953e06cc491
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "upenn-haskell-0.1.0.0-CHl4ef8onAEL7YxDnip8Mo"#) -}
+6f1eaa25986ba162cb782f6dcf642496
+  doubleEveryOther ::
+    [GHC.Integer.Type.Integer] -> [GHC.Integer.Type.Integer]
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (n :: [GHC.Integer.Type.Integer]) ->
+                 Week1.reverseList
+                   (Week1.doubleLoop
+                      Week1.doubleEveryOther1
+                      (Week1.reverseList n))) -}
+96e9512fd9b8b50588358ef5de065241
+  doubleEveryOther1 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (1) -}
+84d39e35a8cdf653291d8b94de79fa8d
+  doubleLoop ::
+    GHC.Integer.Type.Integer
+    -> [GHC.Integer.Type.Integer] -> [GHC.Integer.Type.Integer]
+  {- Arity: 2, Strictness: <L,U><S,1*U> -}
+e5767c307ebfc8b1310523e95410dae4
+  luhn :: GHC.Integer.Type.Integer -> GHC.Integer.Type.Integer
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (n :: GHC.Integer.Type.Integer) ->
+                 Week1.sumDigits
+                   (Week1.reverseList
+                      (Week1.doubleLoop
+                         Week1.doubleEveryOther1
+                         (Week1.reverseList (Week1.toDigits n))))) -}
+7ff0a16652e1c9c51453235203de16dc
+  reverseList ::
+    [GHC.Integer.Type.Integer] -> [GHC.Integer.Type.Integer]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U> -}
+fb79a1ffe0fd1a79c9c44eca459b7db1
+  sumArray :: [GHC.Integer.Type.Integer] -> GHC.Integer.Type.Integer
+  {- Arity: 1, Strictness: <S,1*U> -}
+d6ea8cad4cd9d8a9f12d29c222a9cd43
+  sumDigits :: [GHC.Integer.Type.Integer] -> GHC.Integer.Type.Integer
+  {- Arity: 1, Strictness: <S,1*U> -}
+9e7ec7210d84249aec9fa17d8a526b8a
+  toDigits :: GHC.Integer.Type.Integer -> [GHC.Integer.Type.Integer]
+  {- Arity: 1, Strictness: <S,U> -}
+e66b5bd9062f1cd6e541632990a9f4e8
+  toDigitsRev ::
+    GHC.Integer.Type.Integer -> [GHC.Integer.Type.Integer]
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (n :: GHC.Integer.Type.Integer) ->
+                 Week1.reverseList (Week1.toDigits n)) -}
+713a22cf458dc90741d4ba33b086d6dc
+  validate :: GHC.Integer.Type.Integer -> GHC.Types.Bool
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (n :: GHC.Integer.Type.Integer) ->
+                 case GHC.Integer.Type.eqInteger#
+                        (GHC.Integer.Type.modInteger (Week1.luhn n) Week1.validate2)
+                        Week1.validate1 of wild { DEFAULT ->
+                 GHC.Prim.tagToEnum# @ GHC.Types.Bool wild }) -}
+ce62ab943fffeaed4b060b423a2b87b9
+  validate1 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (0) -}
+51e2e20f76cc6ea00991983005c5c93b
+  validate2 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (10) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

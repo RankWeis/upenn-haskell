@@ -1,0 +1,286 @@
+
+==================== FINAL INTERFACE ====================
+2017-06-10 20:31:51.510974 UTC
+
+interface upenn-haskell-0.1.0.0-CHl4ef8onAEL7YxDnip8Mo:Week2 8002
+  interface hash: 8f728abf544797ce1d3b025aeb6c4dab
+  ABI hash: 8e1c4ac7724a23a2363ab1a0d920b301
+  export-list hash: c627a30949a6207986dad3368766ac48
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: f6624f22fcdd76ed0ac6625466e2d712
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Week2.build
+  Week2.buildHelper
+  Week2.getDigitUntilSpace
+  Week2.getDigitUntilSpaceHelper
+  Week2.getSevereMessages
+  Week2.inOrder
+  Week2.insert
+  Week2.parse
+  Week2.parseMessage
+  Week2.parseMessageType
+  Week2.whatWentWrong
+module dependencies: Log
+package dependencies: base-4.9.1.0* ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Const
+                         base-4.9.1.0:Data.Monoid base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:GHC.Generics base-4.9.1.0:GHC.IO.Exception
+                         base-4.9.1.0:GHC.TypeLits
+import  -/  base-4.9.1.0:Data.Char 01433d23661edb6e5ef1536ef1e6774c
+import  -/  base-4.9.1.0:Data.OldList 27987919d8da2f92e3f472ca81f730f8
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.List ab8c4e523e6c479c549d3bcd5fc4a439
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  base-4.9.1.0:Text.Read 75c59863e882ebaec4532e9465e2ee9b
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+import  -/  Log 3f7b62452b83baa541cd3f0dd780cd40
+  exports: 5f95bd2cf4ce31e82e00adb875bc870a
+  Error eabe027ffa748e8ad016c9e44aaa8be2
+  Info 6946261176a3e68ebc7706f94628e6eb
+  Leaf fc40b3718c9c5433af2be7fa45d4185d
+  LogMessage ff1be03050326f5566368f6edfe3044f
+  LogMessage edaf4a3d4f536e02d25e7464e02b63f1
+  MessageTree afcb737307dec6ae6809e0bb70cd5bfe
+  MessageType e26989e8c8565a89a73480f136a810e1
+  Node 6de15e0057bf18b154deda6735155b6c
+  Unknown b3a68198aac027178642fc95091d813e
+  Warning e6e50deccc9208172b46cb8635653bda
+6ad3b0275369559038da05ae6ca1ae50
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Week2.$trModule2 Week2.$trModule1) -}
+34625ae2c6627d284fd30c713f7ee279
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Week2"#) -}
+e546d9edcbf252ee2d79b001bb0bae40
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "upenn-haskell-0.1.0.0-CHl4ef8onAEL7YxDnip8Mo"#) -}
+d3b8ce310874d6f7da3c3182617faa41
+  $wgetDigitUntilSpaceHelper ::
+    GHC.Base.String
+    -> GHC.Base.String -> (# GHC.Types.Int, GHC.Base.String #)
+  {- Arity: 2, Strictness: <S,1*U><L,U>, Inline: [0] -}
+68218fd40b7d18adc8de390f41d0f238
+  $wparseMessage ::
+    GHC.Base.String
+    -> (# Log.MessageType, Log.TimeStamp, GHC.Base.String #)
+  {- Arity: 1, Strictness: <L,1*U>, Inline: [0],
+     Unfolding: (\ (w :: GHC.Base.String) ->
+                 let {
+                   ds :: (Log.MessageType, GHC.Base.String)
+                   = case w of wild {
+                       [] -> Week2.parseMessage3
+                       : ds1 ds2
+                       -> case ds1 of wild1 { GHC.Types.C# ds3 ->
+                          case ds3 of ds4 {
+                            DEFAULT -> (Week2.parseMessage1, ds2)
+                            'E'#
+                            -> case ds2 of wild2 {
+                                 [] -> Week2.parseMessage3
+                                 : ds5 xs
+                                 -> case ds5 of wild3 { GHC.Types.C# ds6 ->
+                                    case ds6 of ds7 {
+                                      DEFAULT -> (Week2.parseMessage1, wild2)
+                                      ' '#
+                                      -> let {
+                                           ds8 :: (GHC.Types.Int, GHC.Base.String)
+                                           = case Week2.$wgetDigitUntilSpaceHelper
+                                                    xs
+                                                    (GHC.Types.[]
+                                                       @ GHC.Types.Char) of ww { (#,#) ww1 ww2 ->
+                                             (ww1, ww2) }
+                                         } in
+                                         (Log.Error
+                                            (case ds8 of wild4 { (,) errorCode s -> errorCode }),
+                                          case ds8 of wild4 { (,) errorCode s -> s }) } } }
+                            'I'#
+                            -> case ds2 of wild2 {
+                                 [] -> Week2.parseMessage3
+                                 : ds5 xs
+                                 -> case ds5 of wild3 { GHC.Types.C# ds6 ->
+                                    case ds6 of ds7 {
+                                      DEFAULT -> (Week2.parseMessage1, wild2)
+                                      ' '# -> (Log.Info, xs) } } }
+                            'W'#
+                            -> case ds2 of wild2 {
+                                 [] -> Week2.parseMessage3
+                                 : ds5 xs
+                                 -> case ds5 of wild3 { GHC.Types.C# ds6 ->
+                                    case ds6 of ds7 {
+                                      DEFAULT -> (Week2.parseMessage1, wild2)
+                                      ' '# -> (Log.Warning, xs) } } } } } }
+                 } in
+                 let {
+                   ds1 :: (GHC.Types.Int, GHC.Base.String)
+                   = case ds of wild { (,) mType s1 ->
+                     case Week2.$wgetDigitUntilSpaceHelper
+                            s1
+                            (GHC.Types.[] @ GHC.Types.Char) of ww { (#,#) ww1 ww2 ->
+                     (ww1, ww2) } }
+                 } in
+                 (# case ds of wild { (,) mType s1 -> mType },
+                    case ds1 of wild { (,) timestamp s2 -> timestamp },
+                    case ds1 of wild { (,) timestamp s2 -> s2 } #)) -}
+78f44350875278568ed775bedc916c64
+  build :: [Log.LogMessage] -> Log.MessageTree
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (messages :: [Log.LogMessage]) ->
+                 Week2.buildHelper messages Log.Leaf) -}
+c954d0e46105e1712474be37cb95e52e
+  buildHelper ::
+    [Log.LogMessage] -> Log.MessageTree -> Log.MessageTree
+  {- Arity: 2, Strictness: <S,1*U><S,1*U> -}
+9eecb96327b146b6dd3297fdf32328fd
+  getDigitUntilSpace ::
+    GHC.Base.String -> (GHC.Types.Int, GHC.Base.String)
+  {- Arity: 1, Strictness: <S,1*U>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (s :: GHC.Base.String) ->
+                 Week2.getDigitUntilSpaceHelper
+                   s
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+8a4da3fc02defe70cf322424b0fd19c9
+  getDigitUntilSpaceHelper ::
+    GHC.Base.String
+    -> GHC.Base.String -> (GHC.Types.Int, GHC.Base.String)
+  {- Arity: 2, Strictness: <S,1*U><L,U>m, Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: GHC.Base.String) (w1 :: GHC.Base.String) ->
+                 case Week2.$wgetDigitUntilSpaceHelper w w1 of ww { (#,#) ww1 ww2 ->
+                 (ww1, ww2) }) -}
+e245ec15b3eb0aedb44a25c21ae1cf6c
+  getSevereMessages :: Log.LogMessage -> GHC.Base.String
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Log.LogMessage) ->
+                 case ds of wild {
+                   Log.LogMessage ds1 ds2 message
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.[] @ GHC.Types.Char
+                        Log.Error sev
+                        -> case sev of wild2 { GHC.Types.I# x ->
+                           case GHC.Prim.tagToEnum#
+                                  @ GHC.Types.Bool
+                                  (GHC.Prim.>=# x 50#) of wild3 {
+                             GHC.Types.False -> GHC.Types.[] @ GHC.Types.Char
+                             GHC.Types.True -> message } } }
+                   Log.Unknown ipv -> GHC.Types.[] @ GHC.Types.Char }) -}
+acb8dbc3048763064bfb81ad973da9aa
+  inOrder :: Log.MessageTree -> [Log.LogMessage]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U> -}
+7154d19cee9dbf9e2bedaefbc05b1d4c
+  insert :: Log.LogMessage -> Log.MessageTree -> Log.MessageTree
+  {- Arity: 2, Strictness: <S,1*U><S,1*U> -}
+247a71b2f9b456f3c2c5a873dc5856f2
+  parse :: GHC.Base.String -> [Log.LogMessage]
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (s :: GHC.Base.String) ->
+                 GHC.Base.build
+                   @ Log.LogMessage
+                   (\ @ b1
+                      (c :: Log.LogMessage -> b1 -> b1)[OneShot]
+                      (n :: b1)[OneShot] ->
+                    GHC.Base.foldr
+                      @ [GHC.Types.Char]
+                      @ b1
+                      (GHC.Base.mapFB
+                         @ Log.LogMessage
+                         @ b1
+                         @ [GHC.Types.Char]
+                         c
+                         Week2.parseMessage)
+                      n
+                      (Data.OldList.lines s))) -}
+5d48f88a18b98907bec9518e4954e020
+  parseMessage :: GHC.Base.String -> Log.LogMessage
+  {- Arity: 1, Strictness: <L,1*U>m1, Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: GHC.Base.String) ->
+                 case Week2.$wparseMessage w of ww { (#,,#) ww1 ww2 ww3 ->
+                 Log.LogMessage ww1 ww2 ww3 }) -}
+71e47a99731477c51a10be64a80beb87
+  parseMessage1 :: Log.MessageType
+  {- HasNoCafRefs, Strictness: m3,
+     Unfolding: (Log.Error Week2.parseMessage2) -}
+2d0658fb5bd1ec4e2b0b48177642d3c9
+  parseMessage2 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+9b0ddeff6a8f3d22cb070f362ee4ea09
+  parseMessage3 :: (Log.MessageType, GHC.Base.String)
+  {- HasNoCafRefs,
+     Unfolding: ((Week2.parseMessage1,
+                  GHC.Types.[] @ GHC.Types.Char)) -}
+276544fe71bde80f53c229c3a460a978
+  parseMessageType ::
+    GHC.Base.String -> (Log.MessageType, GHC.Base.String)
+  {- Arity: 1, Strictness: <S,1*U>m, Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: GHC.Base.String) ->
+                 case w of wild {
+                   [] -> (Week2.parseMessage1, GHC.Types.[] @ GHC.Types.Char)
+                   : ds ds1
+                   -> case ds of wild1 { GHC.Types.C# ds2 ->
+                      case ds2 of ds3 {
+                        DEFAULT -> (Week2.parseMessage1, ds1)
+                        'E'#
+                        -> case ds1 of wild2 {
+                             [] -> (Week2.parseMessage1, GHC.Types.[] @ GHC.Types.Char)
+                             : ds4 xs
+                             -> case ds4 of wild3 { GHC.Types.C# ds5 ->
+                                case ds5 of ds6 {
+                                  DEFAULT -> (Week2.parseMessage1, wild2)
+                                  ' '#
+                                  -> let {
+                                       ds7 :: (GHC.Types.Int, GHC.Base.String)
+                                       = case Week2.$wgetDigitUntilSpaceHelper
+                                                xs
+                                                (GHC.Types.[]
+                                                   @ GHC.Types.Char) of ww { (#,#) ww1 ww2 ->
+                                         (ww1, ww2) }
+                                     } in
+                                     (Log.Error
+                                        (case ds7 of wild4 { (,) errorCode s -> errorCode }),
+                                      case ds7 of wild4 { (,) errorCode s -> s }) } } }
+                        'I'#
+                        -> case ds1 of wild2 {
+                             [] -> (Week2.parseMessage1, GHC.Types.[] @ GHC.Types.Char)
+                             : ds4 xs
+                             -> case ds4 of wild3 { GHC.Types.C# ds5 ->
+                                case ds5 of ds6 {
+                                  DEFAULT -> (Week2.parseMessage1, wild2)
+                                  ' '# -> (Log.Info, xs) } } }
+                        'W'#
+                        -> case ds1 of wild2 {
+                             [] -> (Week2.parseMessage1, GHC.Types.[] @ GHC.Types.Char)
+                             : ds4 xs
+                             -> case ds4 of wild3 { GHC.Types.C# ds5 ->
+                                case ds5 of ds6 {
+                                  DEFAULT -> (Week2.parseMessage1, wild2)
+                                  ' '# -> (Log.Warning, xs) } } } } } }) -}
+05ab0fe4bbe15817c264bb66540a08f3
+  whatWentWrong :: [Log.LogMessage] -> [GHC.Base.String]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: (\ (messages :: [Log.LogMessage]) ->
+                 Week2.whatWentWrong_go messages) -}
+faeb8fe60c65a853c4aef9273d5321e2
+  whatWentWrong_go :: [Log.LogMessage] -> [[GHC.Types.Char]]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U> -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

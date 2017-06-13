@@ -1,0 +1,673 @@
+
+==================== FINAL INTERFACE ====================
+2017-06-09 18:23:57.554198 UTC
+
+interface upenn-haskell-0.1.0.0-CHl4ef8onAEL7YxDnip8Mo:Log 8002
+  interface hash: 2e3ace01981ad01210e3d276a242fe03
+  ABI hash: 3f7b62452b83baa541cd3f0dd780cd40
+  export-list hash: 5f95bd2cf4ce31e82e00adb875bc870a
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: f6624f22fcdd76ed0ac6625466e2d712
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Log.testParse
+  Log.testWhatWentWrong
+  Log.LogMessage{Log.LogMessage Log.Unknown}
+  Log.MessageTree{Log.Leaf Log.Node}
+  Log.MessageType{Log.Error Log.Info Log.Warning}
+  Log.TimeStamp
+module dependencies:
+package dependencies: base-4.9.1.0* ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Const
+                         base-4.9.1.0:Data.Monoid base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:GHC.Generics base-4.9.1.0:GHC.IO.Exception
+                         base-4.9.1.0:GHC.TypeLits
+import  -/  base-4.9.1.0:Control.Applicative 32430a90492e727f4bd80db71c28600c
+import  -/  base-4.9.1.0:Data.Functor 5ab1dc703df5b482e77efb697833ca3c
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.IO eb504c57b397cf133849f8586f15dafb
+import  -/  base-4.9.1.0:GHC.List ab8c4e523e6c479c549d3bcd5fc4a439
+import  -/  base-4.9.1.0:GHC.Show a027f5ac24879eaba752f44aa90fe511
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  base-4.9.1.0:System.IO c9de64c5f5407c4cf1c52500c4d15200
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
+edaf4a3d4f536e02d25e7464e02b63f1
+  $fEqLogMessage :: GHC.Classes.Eq Log.LogMessage
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Log.LogMessage Log.$fEqLogMessage_$c== Log.$fEqLogMessage_$c/= -}
+edaf4a3d4f536e02d25e7464e02b63f1
+  $fEqLogMessage_$c/= ::
+    Log.LogMessage -> Log.LogMessage -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (a :: Log.LogMessage) (b :: Log.LogMessage) ->
+                 case Log.$fEqLogMessage_$c== a b of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+edaf4a3d4f536e02d25e7464e02b63f1
+  $fEqLogMessage_$c== ::
+    Log.LogMessage -> Log.LogMessage -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ (ds :: Log.LogMessage) (ds1 :: Log.LogMessage) ->
+                 case ds of wild {
+                   Log.LogMessage a1 a2 a3
+                   -> case ds1 of wild1 {
+                        Log.LogMessage b1 b2 b3
+                        -> case a1 of wild2 {
+                             Log.Info
+                             -> case b1 of wild3 {
+                                  DEFAULT -> GHC.Types.False
+                                  Log.Info
+                                  -> case a2 of wild4 { GHC.Types.I# x ->
+                                     case b2 of wild5 { GHC.Types.I# y ->
+                                     case GHC.Prim.tagToEnum#
+                                            @ GHC.Types.Bool
+                                            (GHC.Prim.==# x y) of wild6 {
+                                       GHC.Types.False -> GHC.Types.False
+                                       GHC.Types.True -> GHC.Base.eqString a3 b3 } } } }
+                             Log.Warning
+                             -> case b1 of wild3 {
+                                  DEFAULT -> GHC.Types.False
+                                  Log.Warning
+                                  -> case a2 of wild4 { GHC.Types.I# x ->
+                                     case b2 of wild5 { GHC.Types.I# y ->
+                                     case GHC.Prim.tagToEnum#
+                                            @ GHC.Types.Bool
+                                            (GHC.Prim.==# x y) of wild6 {
+                                       GHC.Types.False -> GHC.Types.False
+                                       GHC.Types.True -> GHC.Base.eqString a3 b3 } } } }
+                             Log.Error a4
+                             -> case b1 of wild3 {
+                                  DEFAULT -> GHC.Types.False
+                                  Log.Error b4
+                                  -> case a4 of wild4 { GHC.Types.I# x ->
+                                     case b4 of wild5 { GHC.Types.I# y ->
+                                     case GHC.Prim.tagToEnum#
+                                            @ GHC.Types.Bool
+                                            (GHC.Prim.==# x y) of wild6 {
+                                       GHC.Types.False -> GHC.Types.False
+                                       GHC.Types.True
+                                       -> case a2 of wild7 { GHC.Types.I# x1 ->
+                                          case b2 of wild8 { GHC.Types.I# y1 ->
+                                          case GHC.Prim.tagToEnum#
+                                                 @ GHC.Types.Bool
+                                                 (GHC.Prim.==# x1 y1) of wild9 {
+                                            GHC.Types.False -> GHC.Types.False
+                                            GHC.Types.True
+                                            -> GHC.Base.eqString a3 b3 } } } } } } } }
+                        Log.Unknown ipv -> GHC.Types.False }
+                   Log.Unknown a1
+                   -> case ds1 of wild1 {
+                        Log.LogMessage ipv ipv1 ipv2 -> GHC.Types.False
+                        Log.Unknown b1 -> GHC.Base.eqString a1 b1 } }) -}
+afcb737307dec6ae6809e0bb70cd5bfe
+  $fEqMessageTree :: GHC.Classes.Eq Log.MessageTree
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Log.MessageTree
+                  Log.$fEqMessageTree_$c==
+                  Log.$fEqMessageTree_$c/= -}
+afcb737307dec6ae6809e0bb70cd5bfe
+  $fEqMessageTree_$c/= ::
+    Log.MessageTree -> Log.MessageTree -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (a :: Log.MessageTree) (b :: Log.MessageTree) ->
+                 case Log.$fEqMessageTree_$c== a b of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+afcb737307dec6ae6809e0bb70cd5bfe
+  $fEqMessageTree_$c== ::
+    Log.MessageTree -> Log.MessageTree -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U> -}
+e26989e8c8565a89a73480f136a810e1
+  $fEqMessageType :: GHC.Classes.Eq Log.MessageType
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Log.MessageType
+                  Log.$fEqMessageType_$c==
+                  Log.$fEqMessageType_$c/= -}
+e26989e8c8565a89a73480f136a810e1
+  $fEqMessageType_$c/= ::
+    Log.MessageType -> Log.MessageType -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ (a :: Log.MessageType) (b :: Log.MessageType) ->
+                 case a of wild {
+                   Log.Info
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True Log.Info -> GHC.Types.False }
+                   Log.Warning
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True Log.Warning -> GHC.Types.False }
+                   Log.Error a1
+                   -> case b of wild1 {
+                        DEFAULT -> GHC.Types.True
+                        Log.Error b1
+                        -> case a1 of wild2 { GHC.Types.I# x ->
+                           case b1 of wild3 { GHC.Types.I# y ->
+                           case GHC.Prim.tagToEnum#
+                                  @ GHC.Types.Bool
+                                  (GHC.Prim.==# x y) of wild4 {
+                             GHC.Types.False -> GHC.Types.True
+                             GHC.Types.True -> GHC.Types.False } } } } }) -}
+e26989e8c8565a89a73480f136a810e1
+  $fEqMessageType_$c== ::
+    Log.MessageType -> Log.MessageType -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ (ds :: Log.MessageType) (ds1 :: Log.MessageType) ->
+                 case ds of wild {
+                   Log.Info
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Log.Info -> GHC.Types.True }
+                   Log.Warning
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False Log.Warning -> GHC.Types.True }
+                   Log.Error a1
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Log.Error b1 -> GHC.Classes.eqInt a1 b1 } }) -}
+edaf4a3d4f536e02d25e7464e02b63f1
+  $fShowLogMessage :: GHC.Show.Show Log.LogMessage
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Log.LogMessage
+                  Log.$fShowLogMessage_$cshowsPrec1
+                  Log.$fShowLogMessage_$cshow
+                  Log.$fShowLogMessage_$cshowList -}
+edaf4a3d4f536e02d25e7464e02b63f1
+  $fShowLogMessage1 :: Log.LogMessage -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (\ (w :: Log.LogMessage) (w1 :: GHC.Base.String) ->
+                 Log.$w$cshowsPrec 0# w w1) -}
+79e2524bb1603e417019a1620520394e
+  $fShowLogMessage2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Unknown "#) -}
+e36cbe017a06de8e27b74ac15610a15c
+  $fShowLogMessage3 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 11#) -}
+5b8b02aeba3ef4d6c1d10ee89f306042
+  $fShowLogMessage4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Error "#) -}
+7e542655cb5806e3860dfa07285c2cb6
+  $fShowLogMessage5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Warning"#) -}
+4de2e80dcb15c2f04c27e2ab45f02b78
+  $fShowLogMessage6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Info"#) -}
+0835c6299bbbd3df3575517eb6363791
+  $fShowLogMessage7 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "LogMessage "#) -}
+edaf4a3d4f536e02d25e7464e02b63f1
+  $fShowLogMessage_$cshow :: Log.LogMessage -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Log.LogMessage) ->
+                 Log.$fShowLogMessage_$cshowsPrec1
+                   GHC.Show.shows22
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+edaf4a3d4f536e02d25e7464e02b63f1
+  $fShowLogMessage_$cshowList :: [Log.LogMessage] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ Log.LogMessage
+                   Log.$fShowLogMessage1) -}
+e26989e8c8565a89a73480f136a810e1
+  $fShowLogMessage_$cshowsPrec ::
+    GHC.Types.Int -> Log.MessageType -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,1*U(U)><S,1*U><L,U>,
+     Unfolding: (\ (ds :: GHC.Types.Int)
+                   (ds1 :: Log.MessageType)
+                   (eta :: GHC.Base.String) ->
+                 case ds1 of wild {
+                   Log.Info -> GHC.Base.++ @ GHC.Types.Char Log.$fShowLogMessage6 eta
+                   Log.Warning
+                   -> GHC.Base.++ @ GHC.Types.Char Log.$fShowLogMessage5 eta
+                   Log.Error b1
+                   -> case ds of wild1 { GHC.Types.I# x ->
+                      case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.>=# x 11#) of wild2 {
+                        GHC.Types.False
+                        -> GHC.Base.++
+                             @ GHC.Types.Char
+                             Log.$fShowLogMessage4
+                             (case b1 of ww2 { GHC.Types.I# ww3 ->
+                              case GHC.Show.$wshowSignedInt 11# ww3 eta of ww4 { (#,#) ww5 ww6 ->
+                              GHC.Types.: @ GHC.Types.Char ww5 ww6 } })
+                        GHC.Types.True
+                        -> GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.shows7
+                             (GHC.Base.++
+                                @ GHC.Types.Char
+                                Log.$fShowLogMessage4
+                                (case b1 of ww2 { GHC.Types.I# ww3 ->
+                                 case GHC.Show.$wshowSignedInt
+                                        11#
+                                        ww3
+                                        (GHC.Types.:
+                                           @ GHC.Types.Char
+                                           GHC.Show.shows4
+                                           eta) of ww4 { (#,#) ww5 ww6 ->
+                                 GHC.Types.: @ GHC.Types.Char ww5 ww6 } })) } } }) -}
+edaf4a3d4f536e02d25e7464e02b63f1
+  $fShowLogMessage_$cshowsPrec1 ::
+    GHC.Types.Int -> Log.LogMessage -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <S(S),1*U(U)><S,1*U><L,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: Log.LogMessage)
+                   (w2 :: GHC.Base.String) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 Log.$w$cshowsPrec ww1 w1 w2 }) -}
+afcb737307dec6ae6809e0bb70cd5bfe
+  $fShowMessageTree :: GHC.Show.Show Log.MessageTree
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Log.MessageTree
+                  Log.$fShowMessageTree_$cshowsPrec
+                  Log.$fShowMessageTree_$cshow
+                  Log.$fShowMessageTree_$cshowList -}
+afcb737307dec6ae6809e0bb70cd5bfe
+  $fShowMessageTree1 :: Log.MessageTree -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (Log.$fShowMessageTree_$cshowsPrec
+                   Log.$fShowMessageTree2) -}
+10551a15b4e1e9b5d3be1b8b3cdc7eab
+  $fShowMessageTree2 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+afcb737307dec6ae6809e0bb70cd5bfe
+  $fShowMessageTree_$cshow :: Log.MessageTree -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Log.MessageTree) ->
+                 Log.$fShowMessageTree_$cshowsPrec
+                   GHC.Show.shows22
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+afcb737307dec6ae6809e0bb70cd5bfe
+  $fShowMessageTree_$cshowList :: [Log.MessageTree] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ Log.MessageTree
+                   Log.$fShowMessageTree1) -}
+afcb737307dec6ae6809e0bb70cd5bfe
+  $fShowMessageTree_$cshowsPrec ::
+    GHC.Types.Int -> Log.MessageTree -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,1*U(U)><S,1*U><L,U> -}
+e26989e8c8565a89a73480f136a810e1
+  $fShowMessageType :: GHC.Show.Show Log.MessageType
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Log.MessageType
+                  Log.$fShowLogMessage_$cshowsPrec
+                  Log.$fShowMessageType_$cshow
+                  Log.$fShowMessageType_$cshowList -}
+e26989e8c8565a89a73480f136a810e1
+  $fShowMessageType1 :: Log.MessageType -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (Log.$fShowLogMessage_$cshowsPrec
+                   Log.$fShowMessageTree2) -}
+e26989e8c8565a89a73480f136a810e1
+  $fShowMessageType_$cshow :: Log.MessageType -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (x :: Log.MessageType) ->
+                 case x of wild {
+                   Log.Info -> Log.$fShowLogMessage6
+                   Log.Warning -> Log.$fShowLogMessage5
+                   Log.Error b1
+                   -> GHC.Base.++
+                        @ GHC.Types.Char
+                        Log.$fShowLogMessage4
+                        (case b1 of ww2 { GHC.Types.I# ww3 ->
+                         case GHC.Show.$wshowSignedInt
+                                11#
+                                ww3
+                                (GHC.Types.[] @ GHC.Types.Char) of ww4 { (#,#) ww5 ww6 ->
+                         GHC.Types.: @ GHC.Types.Char ww5 ww6 } }) }) -}
+e26989e8c8565a89a73480f136a810e1
+  $fShowMessageType_$cshowList :: [Log.MessageType] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ Log.MessageType
+                   Log.$fShowMessageType1) -}
+f6085c0de5e2d36f848cbed25662c9fa
+  $tc'Error :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   16562564911087458779##
+                   7963291619403233956##
+                   Log.$trModule
+                   Log.$tc'Error1) -}
+b8078906410430218740c53f20dbc0e0
+  $tc'Error1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Error"#) -}
+b97fe18a417ebb5127ac55f2b27cb981
+  $tc'Info :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   12296713205796803711##
+                   7650446296593629353##
+                   Log.$trModule
+                   Log.$tc'Info1) -}
+1cc0c40b90dcc7c9cce404aee48fe5c9
+  $tc'Info1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Info"#) -}
+15b49da5cdec38b3a6b720318ed84c7d
+  $tc'Leaf :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   18243070588604251004##
+                   1746198970400300173##
+                   Log.$trModule
+                   Log.$tc'Leaf1) -}
+1d94bc652d781e2a249cbfcd22672031
+  $tc'Leaf1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Leaf"#) -}
+b6ea3c0b3c94f016a142056bd8e834b4
+  $tc'LogMessage :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   262439460551400050##
+                   14140692593010301694##
+                   Log.$trModule
+                   Log.$tc'LogMessage1) -}
+9658a0a8ecd727d39236f856d7b0ec28
+  $tc'LogMessage1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'LogMessage"#) -}
+4cb9a6a59ff0da9ee952efd0fbeb8b6c
+  $tc'Node :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   17062322435723132252##
+                   423649316835815583##
+                   Log.$trModule
+                   Log.$tc'Node1) -}
+9556833898359ec705106115a298431e
+  $tc'Node1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Node"#) -}
+f71c11d0101fbd4ee8a452a102b29b77
+  $tc'Unknown :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   15169897047503119017##
+                   5677227413464170787##
+                   Log.$trModule
+                   Log.$tc'Unknown1) -}
+f9bbc088f7979a07730cabd0de466493
+  $tc'Unknown1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Unknown"#) -}
+9dcdf081f0b0c9f7e108f3156e46654b
+  $tc'Warning :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   356214579732854827##
+                   9286019799271322870##
+                   Log.$trModule
+                   Log.$tc'Warning1) -}
+9e26cd1b7c47971cde0140300e86ea43
+  $tc'Warning1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Warning"#) -}
+b97403e3cdae5fbc2c42f7331bcc0955
+  $tcLogMessage :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   9568757726870120187##
+                   16028898934871298323##
+                   Log.$trModule
+                   Log.$tcLogMessage1) -}
+c0ae1813549cdefe107bc6c0d33d83ba
+  $tcLogMessage1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "LogMessage"#) -}
+da8d50cf36114bb79b2969e153599e6c
+  $tcMessageTree :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   373555904577278305##
+                   16156051318197500085##
+                   Log.$trModule
+                   Log.$tcMessageTree1) -}
+a18fa398803d5cfcd3b48243c7c6f51a
+  $tcMessageTree1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "MessageTree"#) -}
+54dd1dacd6e27e3eccbcc7625703c419
+  $tcMessageType :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   15913827536753933703##
+                   8675873409254336145##
+                   Log.$trModule
+                   Log.$tcMessageType1) -}
+4bda8c72087076fe733f12ba61c0e1a5
+  $tcMessageType1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "MessageType"#) -}
+b28b1a95c3c04f5cfaf00977caab32c9
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Log.$trModule2 Log.$trModule1) -}
+3af8df723c128ba218ba8fc0a305fb76
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Log"#) -}
+aa44b4b03d4510525fd85c9ba7dfd57f
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "upenn-haskell-0.1.0.0-CHl4ef8onAEL7YxDnip8Mo"#) -}
+edaf4a3d4f536e02d25e7464e02b63f1
+  $w$cshowsPrec ::
+    GHC.Prim.Int#
+    -> Log.LogMessage -> GHC.Base.String -> GHC.Base.String
+  {- Arity: 3, Strictness: <S,U><S,1*U><L,U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (w :: Log.LogMessage)
+                   (w1 :: GHC.Base.String) ->
+                 case w of wild {
+                   Log.LogMessage b1 b2 b3
+                   -> let {
+                        p :: GHC.Show.ShowS {- Arity: 1, Strictness: <L,U> -}
+                        = \ (x :: GHC.Base.String)[OneShot] ->
+                          GHC.Base.++
+                            @ GHC.Types.Char
+                            Log.$fShowLogMessage7
+                            (Log.$fShowLogMessage_$cshowsPrec
+                               Log.$fShowLogMessage3
+                               b1
+                               (GHC.Types.:
+                                  @ GHC.Types.Char
+                                  GHC.Show.showSpace1
+                                  (case b2 of ww2 { GHC.Types.I# ww3 ->
+                                   case GHC.Show.$wshowSignedInt
+                                          11#
+                                          ww3
+                                          (GHC.Types.:
+                                             @ GHC.Types.Char
+                                             GHC.Show.showSpace1
+                                             (GHC.Types.:
+                                                @ GHC.Types.Char
+                                                GHC.Show.shows6
+                                                (GHC.Show.showLitString
+                                                   b3
+                                                   (GHC.Types.:
+                                                      @ GHC.Types.Char
+                                                      GHC.Show.shows6
+                                                      x)))) of ww4 { (#,#) ww5 ww6 ->
+                                   GHC.Types.: @ GHC.Types.Char ww5 ww6 } })))
+                      } in
+                      case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.>=# ww 11#) of wild1 {
+                        GHC.Types.False -> p w1
+                        GHC.Types.True
+                        -> GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.shows7
+                             (p (GHC.Types.: @ GHC.Types.Char GHC.Show.shows4 w1)) }
+                   Log.Unknown b1
+                   -> case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.>=# ww 11#) of wild1 {
+                        GHC.Types.False
+                        -> GHC.Base.++
+                             @ GHC.Types.Char
+                             Log.$fShowLogMessage2
+                             (GHC.Types.:
+                                @ GHC.Types.Char
+                                GHC.Show.shows6
+                                (GHC.Show.showLitString
+                                   b1
+                                   (GHC.Types.: @ GHC.Types.Char GHC.Show.shows6 w1)))
+                        GHC.Types.True
+                        -> GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.shows7
+                             (GHC.Base.++
+                                @ GHC.Types.Char
+                                Log.$fShowLogMessage2
+                                (GHC.Types.:
+                                   @ GHC.Types.Char
+                                   GHC.Show.shows6
+                                   (GHC.Show.showLitString
+                                      b1
+                                      (GHC.Types.:
+                                         @ GHC.Types.Char
+                                         GHC.Show.shows6
+                                         (GHC.Types.:
+                                            @ GHC.Types.Char
+                                            GHC.Show.shows4
+                                            w1))))) } }) -}
+edaf4a3d4f536e02d25e7464e02b63f1
+  data LogMessage
+    = LogMessage Log.MessageType Log.TimeStamp GHC.Base.String
+    | Unknown GHC.Base.String
+afcb737307dec6ae6809e0bb70cd5bfe
+  data MessageTree
+    = Leaf | Node Log.MessageTree Log.LogMessage Log.MessageTree
+e26989e8c8565a89a73480f136a810e1
+  data MessageType = Info | Warning | Error GHC.Types.Int
+95a9adca1d5da3e810d62793ef924e28
+  type TimeStamp = GHC.Types.Int
+36976a6a9af7472d28f78781ea86e236
+  testParse ::
+    (GHC.Base.String -> [Log.LogMessage])
+    -> GHC.Types.Int
+    -> GHC.IO.FilePath
+    -> GHC.Types.IO [Log.LogMessage]
+  {- Arity: 4, Strictness: <L,1*C1(U)><L,1*U(U)><L,U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Log.testParse1
+                  `cast`
+                (<GHC.Base.String -> [Log.LogMessage]>_R
+                 ->_R <GHC.Types.Int>_R
+                 ->_R <GHC.IO.FilePath>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <[Log.LogMessage]>_R)) -}
+d769d568e0b2f01dc72e977c22f2d0d0
+  testParse1 ::
+    (GHC.Base.String -> [Log.LogMessage])
+    -> GHC.Types.Int
+    -> GHC.IO.FilePath
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, [Log.LogMessage] #)
+  {- Arity: 4, Strictness: <L,1*C1(U)><L,1*U(U)><L,U><S,U>,
+     Unfolding: (\ (parse :: GHC.Base.String -> [Log.LogMessage])
+                   (n :: GHC.Types.Int)
+                   (file :: GHC.IO.FilePath)
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.IO.Handle.FD.openFile1
+                        file
+                        GHC.IO.IOMode.ReadMode
+                        eta of ds1 { (#,#) ipv ipv1 ->
+                 case GHC.IO.Handle.Text.hGetContents1
+                        ipv1
+                        ipv of ds { (#,#) ipv2 ipv3 ->
+                 (# ipv2,
+                    case n of wild1 { GHC.Types.I# y ->
+                    case GHC.Prim.tagToEnum#
+                           @ GHC.Types.Bool
+                           (GHC.Prim.<# 0# y) of wild {
+                      GHC.Types.False -> GHC.Types.[] @ Log.LogMessage
+                      GHC.Types.True
+                      -> GHC.List.$wunsafeTake
+                           @ Log.LogMessage
+                           y
+                           (parse ipv3) } } #) } }) -}
+525fe7aea5c570a304f18fd776d555fd
+  testWhatWentWrong ::
+    (GHC.Base.String -> [Log.LogMessage])
+    -> ([Log.LogMessage] -> [GHC.Base.String])
+    -> GHC.IO.FilePath
+    -> GHC.Types.IO [GHC.Base.String]
+  {- Arity: 4, Strictness: <L,1*C1(U)><L,1*C1(U)><L,U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Log.testWhatWentWrong1
+                  `cast`
+                (<GHC.Base.String -> [Log.LogMessage]>_R
+                 ->_R <[Log.LogMessage] -> [GHC.Base.String]>_R
+                 ->_R <GHC.IO.FilePath>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <[GHC.Base.String]>_R)) -}
+dd95d9dfc5a80102ef3c94a5326df347
+  testWhatWentWrong1 ::
+    (GHC.Base.String -> [Log.LogMessage])
+    -> ([Log.LogMessage] -> [GHC.Base.String])
+    -> GHC.IO.FilePath
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, [GHC.Base.String] #)
+  {- Arity: 4, Strictness: <L,1*C1(U)><L,1*C1(U)><L,U><S,U>,
+     Unfolding: InlineRule (4, True, False)
+                (\ (parse :: GHC.Base.String -> [Log.LogMessage])
+                   (whatWentWrong :: [Log.LogMessage] -> [GHC.Base.String])
+                   (file :: GHC.IO.FilePath)
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.IO.Handle.FD.openFile1
+                        file
+                        GHC.IO.IOMode.ReadMode
+                        eta of ds1 { (#,#) ipv ipv1 ->
+                 case GHC.IO.Handle.Text.hGetContents1
+                        ipv1
+                        ipv of ds { (#,#) ipv2 ipv3 ->
+                 (# ipv2, whatWentWrong (parse ipv3) #) } }) -}
+instance [safe] GHC.Classes.Eq [Log.LogMessage]
+  = Log.$fEqLogMessage
+instance [safe] GHC.Classes.Eq [Log.MessageTree]
+  = Log.$fEqMessageTree
+instance [safe] GHC.Classes.Eq [Log.MessageType]
+  = Log.$fEqMessageType
+instance [safe] GHC.Show.Show [Log.LogMessage]
+  = Log.$fShowLogMessage
+instance [safe] GHC.Show.Show [Log.MessageTree]
+  = Log.$fShowMessageTree
+instance [safe] GHC.Show.Show [Log.MessageType]
+  = Log.$fShowMessageType
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
